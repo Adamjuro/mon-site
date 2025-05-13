@@ -154,3 +154,50 @@ footer {
     width: 100%;
   }
 }
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  width: 100%;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 0.4em 0.6em;
+  }
+
+  .carousel-image {
+    max-width: 90%;
+  }
+}
+
