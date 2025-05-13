@@ -16,7 +16,12 @@
     <p>Morangis - Paray - Savigny - Chilly</p>
   </header>
 
-  <nav>
+  <nav class="nav" id="nav">
+    <div class="burger" id="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <a href="site.html">Accueil</a>
     <a href="#">Équipes</a>
     <a href="#actualites">Actualités</a>
@@ -24,6 +29,16 @@
     <a href="https://pevb.assoconnect.com/page/2763360-boutique">Boutique</a>
     <a href="https://pevb.assoconnect.com/contacts/login">Se connecter</a>
   </nav>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+  
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('show-links');
+      burger.classList.toggle('active');
+    });
+  </script>
 
   <div class="container">
 
