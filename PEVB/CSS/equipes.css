@@ -46,3 +46,23 @@
   font-size: 0.95rem;
   font-weight: 300;
 }
+
+/* Mobile support */
+@media (max-width: 600px) {
+  .equipe-card {
+    flex-direction: column;
+  }
+  .equipe-card img {
+    width: 100%;
+    height: auto;
+  }
+  .equipe-content {
+    padding: 0.5rem;
+  }
+  .equipe-content h3 {
+    font-size: 1.5rem;
+  }
+  .equipe-content p {
+    font-size: 1rem;
+  }
+}

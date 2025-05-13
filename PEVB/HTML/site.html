@@ -6,6 +6,8 @@
   <title>PEVB - Portes de l'Essonne Volley Ball</title>
   <link rel="stylesheet" href="../CSS/site.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
   <header>
@@ -37,8 +39,7 @@
         <div class="iframe-container">
           <iframe src ="https://www.instagram.com/p/DJJPdPxMtsf/embed" 
             width="320" height="400" frameborder="0" 
-            scrolling="no" allowtransparency="true"> </iframe> <!-- pour remplacer les posts si obsceletes il faut remplacer l'id du post https://www.instagram.com/p/POST_ID_REMPLACE/embed on le trouve en faisant clic droit sur le post instagram puis "integrer" et dans la ligne de code il y aura cette id-->
-         
+            scrolling="no" allowtransparency="true"> </iframe>
         </div>
       </div>
       <div class="card">
@@ -48,7 +49,6 @@
           <iframe src ="https://www.instagram.com/p/DJJPdPxMtsf/embed" 
             width="320" height="400" frameborder="0" 
             scrolling="no" allowtransparency="true"> </iframe>
-         
         </div>
       </div>
       <div class="card">
@@ -58,7 +58,6 @@
           <iframe src ="https://www.instagram.com/p/DJJPdPxMtsf/embed" 
             width="320" height="400" frameborder="0" 
             scrolling="no" allowtransparency="true"> </iframe>
-         
         </div>
       </div>
     </div>
@@ -66,17 +65,26 @@
 
   <section id="actualites">
     <h2>Actualités & Tournois</h2>
-    <div class="carousel-container">
-      <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
-      <div class="carousel-slide">
-        <img src="../assets/tournoi.png" alt="Tournoi" class="carousel-image">
-        <img src="../assets/SF2.PNG" alt="Match" class="carousel-image">
-        <img src="../assets/SM2.PNG" alt="Équipe" class="carousel-image">
+    <!-- Swiper Main Slider -->
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../assets/tournoi.png" alt="Tournoi" /></div>
+        <div class="swiper-slide"><img src="../assets/SF2.PNG" alt="Match" /></div>
+        <div class="swiper-slide"><img src="../assets/SM2.PNG" alt="Équipe" /></div>
       </div>
-      <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <!-- Swiper Thumbnails -->
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide shadow-slide"><img src="../assets/tournoi.png" alt="Tournoi" /></div>
+        <div class="swiper-slide shadow-slide"><img src="../assets/SF2.PNG" alt="Match" /></div>
+        <div class="swiper-slide shadow-slide"><img src="../assets/SM2.PNG" alt="Équipe" /></div>
+      </div>
     </div>
   </section>
-  
 
   <section id="contact">
     <h2>Contact</h2>
@@ -92,5 +100,8 @@
   <footer>
     <p>© 2025 PEVB - Portes de l'Essonne Volley Ball. Tous droits réservés.</p>
   </footer>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="../assets/js.js"></script>
 </body>
 </html>
