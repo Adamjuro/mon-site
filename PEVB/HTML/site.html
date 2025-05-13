@@ -8,10 +8,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <script>
+    let slideIndex = 0;
+    const slideContainer = document.querySelector('.carousel-slide');
+    const slides = document.querySelectorAll('.carousel-image');
+  
+    function moveSlide(direction) {
+      slideIndex += direction;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+  </script>
+  
   <header>
     <img src="assets/pevb_logo.png" alt="Logo PEVB">
     <h1>Portes de l'Essonne Volley Ball</h1>
-    <p>Morangis - Paray - Savigny</p>
+    <p>Morangis - Paray - Savigny - Chilly</p>
   </header>
 
   <nav>
@@ -66,14 +79,17 @@
 
   <section id="actualites">
     <h2>Actualités & Tournois</h2>
-    <div class="slider-container">
-      <div class="slider-images">
-        <img src="../assets/tournoi.PNG" alt="Tournoi">
-        <img src="../assets/SF2.PNG" alt="Match">
-        <img src="../assets/SM2.PNG" alt="Équipe">
+    <div class="carousel-container">
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+      <div class="carousel-slide">
+        <img src="../assets/tournoi.png" alt="Tournoi" class="carousel-image">
+        <img src="../assets/SF2.PNG" alt="Match" class="carousel-image">
+        <img src="../assets/SM2.PNG" alt="Équipe" class="carousel-image">
       </div>
+      <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
     </div>
   </section>
+  
 
   <section id="contact">
     <h2>Contact</h2>
