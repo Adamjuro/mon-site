@@ -8,19 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <script>
-    let slideIndex = 0;
-    const slideContainer = document.querySelector('.carousel-slide');
-    const slides = document.querySelectorAll('.carousel-image');
-  
-    function moveSlide(direction) {
-      slideIndex += direction;
-      if (slideIndex < 0) slideIndex = slides.length - 1;
-      if (slideIndex >= slides.length) slideIndex = 0;
-      slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-    }
-  </script>
-  
   <header>
     <img src="assets/pevb_logo.png" alt="Logo PEVB">
     <h1>Portes de l'Essonne Volley Ball</h1>
